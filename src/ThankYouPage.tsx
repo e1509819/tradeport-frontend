@@ -1,12 +1,13 @@
-import { useParams } from 'react-router-dom';
 
 export function ThankYouPage() {
-  const { name } = useParams<{ name: string }>();
+  
   return (
-    <div className="flex flex-col py-10 max-w-md mx-auto">
-      <div role="alert" className="bg-green-100 py-5 px-6 text-base text-green-700 ">
-        Thanks {name}, we will be in touch shortly
+    <div className="flex justify-center items-center min-h-screen bg-blue-400 overflow-auto">
+      <div className="bg-white p-6 md:p-20 rounded-lg shadow-2xl w-full max-w-lg">
+      <div className="flex flex-col justify-center space-y-5">
+        Thanks  we will be in touch shortly
       </div>
+    </div>
     </div>
   );
 }

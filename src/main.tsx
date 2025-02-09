@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-//import reportWebVitals from './reportWebVitals';
+import { savePost } from './posts/savePost';
+import { ProductMaster } from './Product';
+import { Product } from './posts/types';
 
+
+//import reportWebVitals from './reportWebVitals';
+async function handleSave(product: Product) {
+  const newPost = await savePost(product);
+  console.log(newPost);
+}
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <App />
+    <ProductMaster onSave = {handleSave} />
   </React.StrictMode>,
 );
 

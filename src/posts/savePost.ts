@@ -1,7 +1,7 @@
-import { NewPostData, SavedPostData } from './types';
+import { Product } from './types';
 
-export async function savePost(newPostData: NewPostData) {
-  const response = await fetch('http://localhost:5000/submissions/', {
+export async function savePost(newPostData: Product) {
+  const response = await fetch('http://localhost:3001/submissions/', {
     method: 'POST',
     body: JSON.stringify(newPostData),
     headers: {

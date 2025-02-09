@@ -1,25 +1,17 @@
-export type PostData = {
-    ProductName: string;
-    Description: string;
-    category: string;
-    retailprice: string;
-    retailcurrency: string;
-    wholesaleprice: string;
-    wholesalecurrency: string;
-    stock: string;
-  };
-  
-  export type NewPostData = {
-    ProductName: string;
-    Description: string;
-    category: string;
-    retailprice: string;
-    retailcurrency: string;
-    wholesaleprice: string;
-    wholesalecurrency: string;
-    stock: string;
-  };
-  
+
+
   export type SavedPostData = {
     id: number;
+  };
+
+  export type Product = {
+    productName: string;
+    description: string;
+    category: string;
+    retailPrice: string;
+    retailCurrency: string;
+    wholesalePrice: string;
+    wholeSaleCurrency: string;
+    quantity: string;
+    manufacturerId: string;
   };

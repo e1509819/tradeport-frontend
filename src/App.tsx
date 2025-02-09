@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 import  { ProductMaster } from './Product';
-import { ThankYouPage } from './ThankyouPage';
+import { ThankYouPage } from './ThankYouPage';
 
 const router = createBrowserRouter([
   {
