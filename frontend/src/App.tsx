@@ -6,6 +6,8 @@ import {
   NotFound,
   Login,
   Profile,
+  Products,
+  ProductsDetail
 } from "./pages";
 import { Navbar } from "./components";
 import "./App.css";
@@ -42,6 +44,9 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/product/:id" element={<ProductsDetail />} />
+
             <Route
               path="/profile"
               element={<Profile applicant={applicantData} />}
