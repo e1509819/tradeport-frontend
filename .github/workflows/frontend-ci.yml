@@ -4,13 +4,13 @@ on:
   push:
     branches:
       - master
-      - "XPLSG-**" # This will trigger the workflow for all branches that start with XPLSG-
+      - "feature/**" # This will trigger the workflow for all branches that start with feature/-
     # paths:
     #   - frontend/** # This will trigger the workflow for all changes in the frontend directory
   pull_request:
     branches:
       - master
-      - "XPLSG-**" # This will trigger the workflow for all branches that start with XPLSG-
+      - "feature/**" # This will trigger the workflow for all branches that start with feature/-
     # paths:
     #   - frontend/** # This will trigger the workflow for all changes in the frontend directory
 
