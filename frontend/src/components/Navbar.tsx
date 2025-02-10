@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
                       className={classNames(
                         isActive
                           ? "bg-xploreSGLight text-white"
-                          : "text-gray-400 hover:bg-xploreSGVeryLight hover:text-white hover:text-gray-800",
+                          : "text-gray-400 hover:bg-xploreSGVeryLight hover:text-white ",
                         "rounded-md px-3 py-2 text-sm font-medium",
                       )}
                     >
