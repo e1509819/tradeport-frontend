@@ -1,0 +1,41 @@
+name: Backend-CI
+
+on:
+  push:
+    branches:
+      - master
+      - "XPLSG-**" # This will trigger the workflow for all branches that start with XPLSG-
+    # paths:
+    #   - backend/** # This will trigger the workflow for all changes in the frontend directory
+  pull_request:
+    branches:
+      - master
+      - "XPLSG-**" # This will trigger the workflow for all branches that start with XPLSG-
+    # paths:
+    #   - backend/** # This will trigger the workflow for all changes in the frontend directory
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Python 3.10
+      - name: Setup Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          cd backend
+          pip install -r requirements.txt
+
+      # Run tests
+      - name: Run tests
+        run: |
+          cd backend
+          pytest

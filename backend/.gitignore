@@ -1,0 +1,61 @@
+# Python files
+*.py[cod]
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# FastAPI specific files
+instance/
+*.db
+*.sqlite3
+*.sqlite
+
+# Logs
+*.log
+*.out
+*.err
+logs/
+
+# Environment variables
+.env
+.env.*
+
+# Pytest cache
+.cache/
+.pytest_cache/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# macOS files
+.DS_Store
+
+# IDE files (VSCode, PyCharm, etc.)
+.vscode/
+.idea/
+
+# Docker
+docker-compose.yml
+Dockerfile
+*.dockerfile
+
+# Migrations
+migrations/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/

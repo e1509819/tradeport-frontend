@@ -1,0 +1,41 @@
+name: Frontend-CI
+
+on:
+  push:
+    branches:
+      - master
+      - "XPLSG-**" # This will trigger the workflow for all branches that start with XPLSG-
+    # paths:
+    #   - frontend/** # This will trigger the workflow for all changes in the frontend directory
+  pull_request:
+    branches:
+      - master
+      - "XPLSG-**" # This will trigger the workflow for all branches that start with XPLSG-
+    # paths:
+    #   - frontend/** # This will trigger the workflow for all changes in the frontend directory
+
+jobs:
+  frontend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          cd frontend
+          npm install
+
+      # Build the frontend
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
