@@ -1,7 +1,7 @@
 
 
-  export type SavedPostData = {
-    id: number;
+  export type SavedPost = {
+    Message: string;
   };
 
   export type Product = {

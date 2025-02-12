@@ -1,13 +1,11 @@
 import { Product } from './types';
 
-
 export async function savePost(newPostData: Product) {
-  //const apiUrl = process.env.REACT_APP_API_URL + '/submissions';
-  //http://localhost:3016/api/Product
-  //const apiUrl='http://localhost:3016/submissions/';
+  //const apiUrl =  'http://localhost:3016/submit';
+  const apiUrl =  'http://localhost:3016/api/ProductManagement';
   try {
-    
-    const response = await fetch('http://localhost:3016/api/Product/', {
+    newPostData.manufacturerId = '3fa85f64-5717-4562-b3fc-2c963f66afa6';
+    const response = await fetch(apiUrl, {
       method: 'POST',
       body: JSON.stringify(newPostData),
       headers: {
@@ -15,21 +13,11 @@ export async function savePost(newPostData: Product) {
       },
     });
     const body = await response.json();
-    //assertIsSavedPost(body);
-    return { body };
+    
+    return {...body};
   } catch (error) {
-    console.error('Error saving post:', error);
+    console.error('Error in Connecting the endpoint:', error);
     return { error };
   }
 }
 
-/*
-function assertIsSavedPost(post: any): asserts post is SavedPostData {
-  if (!('id' in post)) {
-    throw new Error("post doesn't contain id");
-  }
-  if (typeof post.id !== 'number') {
-    throw new Error('id is not a number');
-  }
-}
-*/

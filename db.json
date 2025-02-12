@@ -1,4 +1,453 @@
 {
+  "ProductManagement": [
+    {
+      "id": "1001",
+      "category": "Electronics"
+    },
+    {
+      "id": "1002",
+      "category": "Clothing"
+    },
+    {
+      "id": "1003",
+      "category": "Footwear"
+    }
+  ],
+  "submit": [
+    {
+      "id": "2fa4",
+      "productName": "23432",
+      "description": "fdfdhfh",
+      "category": "1003",
+      "retailPrice": "44",
+      "retailCurrency": "USD",
+      "wholesalePrice": "444",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4"
+    },
+    {
+      "id": "ded7",
+      "productName": "23432",
+      "description": "fdfdhfh",
+      "category": "1003",
+      "retailPrice": "44",
+      "retailCurrency": "USD",
+      "wholesalePrice": "444",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4"
+    },
+    {
+      "id": "2489",
+      "productName": "23432",
+      "description": "ranjith",
+      "category": "1001",
+      "retailPrice": "44",
+      "retailCurrency": "USD",
+      "wholesalePrice": "444",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4"
+    },
+    {
+      "id": "591e",
+      "productName": "23432",
+      "description": "taking",
+      "category": "1001",
+      "retailPrice": "44",
+      "retailCurrency": "USD",
+      "wholesalePrice": "444",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4"
+    },
+    {
+      "id": "6950",
+      "productName": "RANJITH",
+      "description": "Test",
+      "category": "1001",
+      "retailPrice": "43432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "232",
+      "wholeSaleCurrency": "USD",
+      "quantity": "122"
+    },
+    {
+      "id": "62bc",
+      "productName": "RANJITH",
+      "description": "Testing",
+      "category": "1001",
+      "retailPrice": "43432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "232",
+      "wholeSaleCurrency": "USD",
+      "quantity": "122"
+    },
+    {
+      "id": "bee7",
+      "productName": "RANJITH",
+      "description": "tes",
+      "category": "1001",
+      "retailPrice": "43432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "232",
+      "wholeSaleCurrency": "USD",
+      "quantity": "122"
+    },
+    {
+      "id": "a9cb",
+      "productName": "RANJITH",
+      "description": "RRRR",
+      "category": "1001",
+      "retailPrice": "88",
+      "retailCurrency": "USD",
+      "wholesalePrice": "88",
+      "wholeSaleCurrency": "USD",
+      "quantity": "99"
+    },
+    {
+      "id": "c04a",
+      "productName": "RANJITH",
+      "description": "Test",
+      "category": "1001",
+      "retailPrice": "11",
+      "retailCurrency": "USD",
+      "wholesalePrice": "11",
+      "wholeSaleCurrency": "USD",
+      "quantity": "11"
+    },
+    {
+      "id": "4182",
+      "productName": "RANJITH",
+      "description": "Test",
+      "category": "1001",
+      "retailPrice": "22",
+      "retailCurrency": "USD",
+      "wholesalePrice": "22",
+      "wholeSaleCurrency": "USD",
+      "quantity": "22"
+    },
+    {
+      "id": "5e57",
+      "productName": "RANJITH",
+      "description": "Tere",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "6a6e",
+      "productName": "RANJITH",
+      "description": "Tere",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "6b94",
+      "productName": "RANJITH",
+      "description": "Raraea",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "944b",
+      "productName": "RANJITH",
+      "description": "4342",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "5b38",
+      "productName": "RANJITH",
+      "description": "RRR",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "80a5",
+      "productName": "RANJITH",
+      "description": "RRR",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "41d6",
+      "productName": "RANJITH",
+      "description": "Teret",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "de50",
+      "productName": "RANJITH",
+      "description": "Terst",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "ad48",
+      "productName": "RANJITH",
+      "description": "uuu",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "e540",
+      "productName": "RANJITH",
+      "description": "Test",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "3b07",
+      "productName": "RANJITH",
+      "description": "Tetst",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "1f23",
+      "productName": "RANJITH",
+      "description": "Tetst",
+      "category": "1001",
+      "retailPrice": "334",
+      "retailCurrency": "USD",
+      "wholesalePrice": "231",
+      "wholeSaleCurrency": "USD",
+      "quantity": "321"
+    },
+    {
+      "id": "6be9",
+      "productName": "Raniot",
+      "description": "errw",
+      "category": "1002",
+      "retailPrice": "33",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "e4f5",
+      "productName": "Raniot",
+      "description": "errw",
+      "category": "1002",
+      "retailPrice": "33",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "d14a",
+      "productName": "Raniot",
+      "description": "errw",
+      "category": "1002",
+      "retailPrice": "33",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "1af0",
+      "productName": "Raniot",
+      "description": "errw",
+      "category": "1002",
+      "retailPrice": "33",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "dd9e",
+      "productName": "Raniot",
+      "description": "ewqereq",
+      "category": "1001",
+      "retailPrice": "32432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "333",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "2c9b",
+      "productName": "Raniot",
+      "description": "ewqereq",
+      "category": "1001",
+      "retailPrice": "32432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "333",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "66a2",
+      "productName": "Raniot",
+      "description": "ewqereq",
+      "category": "1001",
+      "retailPrice": "32432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "333",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "aa70",
+      "productName": "Raniot",
+      "description": "ewqereq",
+      "category": "1001",
+      "retailPrice": "32432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "333",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "708a",
+      "productName": "Raniot",
+      "description": "ewqereq",
+      "category": "1001",
+      "retailPrice": "32432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "333",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "fb7d",
+      "productName": "Raniot",
+      "description": "ewqereq",
+      "category": "1001",
+      "retailPrice": "32432",
+      "retailCurrency": "USD",
+      "wholesalePrice": "333",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33"
+    },
+    {
+      "id": "28cc",
+      "productName": "Raniot",
+      "description": "Test",
+      "category": "1001",
+      "retailPrice": "88",
+      "retailCurrency": "USD",
+      "wholesalePrice": "99",
+      "wholeSaleCurrency": "USD",
+      "quantity": "99"
+    },
+    {
+      "id": "3a29",
+      "productName": "Ranjith",
+      "description": "Testing",
+      "category": "1001",
+      "retailPrice": "99",
+      "retailCurrency": "GBP",
+      "wholesalePrice": "99",
+      "wholeSaleCurrency": "USD",
+      "quantity": "99"
+    },
+    {
+      "id": "d434",
+      "productName": "Ranjith",
+      "description": "eooo",
+      "category": "1002",
+      "retailPrice": "33",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "333"
+    },
+    {
+      "id": "c330",
+      "productName": "Ranjith",
+      "description": "ewrr",
+      "category": "1001",
+      "retailPrice": "33",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "db43",
+      "productName": "Ranjith",
+      "description": "RRR",
+      "category": "1001",
+      "retailPrice": "4",
+      "retailCurrency": "USD",
+      "wholesalePrice": "4",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "483c",
+      "productName": "Ranjith",
+      "description": "uuu",
+      "category": "1001",
+      "retailPrice": "888",
+      "retailCurrency": "USD",
+      "wholesalePrice": "999",
+      "wholeSaleCurrency": "USD",
+      "quantity": "99",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "5396",
+      "productName": "Ranjith",
+      "description": "343",
+      "category": "1001",
+      "retailPrice": "333",
+      "retailCurrency": "USD",
+      "wholesalePrice": "33",
+      "wholeSaleCurrency": "USD",
+      "quantity": "33",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  ],
   "submissions": [
     {
       "id": "6f37"
@@ -237,116 +686,6 @@
       "id": "425d",
       "productName": "RANJITH",
       "description": "trest",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "e802",
-      "productName": "RANJITH",
-      "description": "trest",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "7100",
-      "productName": "RANJITH",
-      "description": "Test",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "94ff",
-      "productName": "RANJITH",
-      "description": "Test",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "8c35",
-      "productName": "RANJITH",
-      "description": "Test",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "7a5d",
-      "productName": "RANJITH",
-      "description": "Test",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "4da7",
-      "productName": "RANJITH",
-      "description": "Test",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "ec0f",
-      "productName": "RANJITH",
-      "description": "Testing",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "f537",
-      "productName": "RANJITH",
-      "description": "Testing",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "152d",
-      "productName": "RANJITH",
-      "description": "Testing",
-      "category": "1001",
-      "retailPrice": "10",
-      "retailCurrency": "USD",
-      "wholesalePrice": "10",
-      "wholeSaleCurrency": "USD",
-      "quantity": "1"
-    },
-    {
-      "id": "7a52",
-      "productName": "RANJITH",
-      "description": "Testing",
       "category": "1001",
       "retailPrice": "10",
       "retailCurrency": "USD",
