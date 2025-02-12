@@ -14,4 +14,5 @@
     wholeSaleCurrency: string;
     quantity: string;
     manufacturerId: string;
+    shippingCost: number;
   };

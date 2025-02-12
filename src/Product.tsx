@@ -71,11 +71,11 @@ export function ProductMaster() {
               {...register('category', { required: 'You must select a category' })}
             >
               <option value="">Select Category</option>
-              <option value="1001">Electronics</option>
-              <option value="1002">Fashion</option>
-              <option value="1003">Home</option>
-              <option value="1004">Beauty</option>
-              <option value="1005">Sports</option>
+              <option value="101">Furniture</option>
+              <option value="102">Fashion</option>
+              <option value="103">Home&Garden</option>
+              <option value="104">Health&Beauty</option>
+              <option value="105">Computer&Office</option>
             </select>
             </div>
             <ValidationError fieldError={errors.category} />
