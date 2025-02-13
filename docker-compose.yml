@@ -1,0 +1,13 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - "3001:3001"
+    environment: 
+      - PORT=3001
+    networks:
+     - my_network  
+
+networks:
+  my_network:
+    driver: bridge
