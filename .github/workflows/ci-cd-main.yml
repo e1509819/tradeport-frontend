@@ -1,4 +1,4 @@
-name: CI/CD Pipeline - tradeport-backend-mssql
+name: CI/CD Pipeline - tradeport-frontend
 
 on:
   push:
