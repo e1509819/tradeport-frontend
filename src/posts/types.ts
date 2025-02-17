@@ -15,4 +15,5 @@
     quantity: string;
     manufacturerId: string;
     shippingCost: number;
+    productimage: string;
   };
