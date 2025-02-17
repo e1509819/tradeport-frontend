@@ -6,7 +6,8 @@ import Error from "./pages/Error";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Categories from "./pages/Categories";
-
+import Profile from "./pages/Profile";
+import ShoppingCart from "./pages/ShoppingCart";
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,6 +16,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<ProductMaster />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
         <Route path="*" element={<Error />} />
       </Routes>

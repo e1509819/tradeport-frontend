@@ -20,7 +20,9 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 flex items-center justify-between border-b-2 bg-white p-4 shadow-lg">
       {/* Logo */}
-      <h1 className="text-xl font-bold">TradePort</h1>
+      <Link to="/">
+        <h1 className="text-xl font-bold">TradePort</h1>
+      </Link>
 
       {/* Desktop Navigation */}
       <div className="hidden space-x-6 md:flex">
@@ -39,15 +41,29 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Icons */}
+      {/* Icons with Navigation */}
       <div className="flex items-center space-x-4">
-        <UserCircleIcon className="h-6 w-6 cursor-pointer text-gray-600" />
-        <div className="relative cursor-pointer">
-          <ShoppingCartIcon className="h-6 w-6 text-gray-600" />
+        {/* Profile Link */}
+        <Link to="/profile">
+          <UserCircleIcon
+            className={`h-6 w-6 cursor-pointer ${
+              location.pathname === "/profile" ? "text-black" : "text-gray-600"
+            }`}
+          />
+        </Link>
+
+        {/* Shopping Cart Link */}
+        <Link to="/cart" className="relative">
+          <ShoppingCartIcon
+            className={`h-6 w-6 ${
+              location.pathname === "/cart" ? "text-black" : "text-gray-600"
+            }`}
+          />
           <span className="absolute -right-2 -top-2 rounded-full bg-red-500 px-1 text-xs text-white">
             2
           </span>
-        </div>
+        </Link>
+
         {/* Mobile Menu Button */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
@@ -76,6 +92,29 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+
+            {/* Profile & Cart in Mobile Menu */}
+            <Link
+              to="/profile"
+              className={`flex items-center space-x-2 text-gray-600 hover:text-black ${
+                location.pathname === "/profile" ? "font-bold text-black" : ""
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              <UserCircleIcon className="h-5 w-5" />
+              <span>Profile</span>
+            </Link>
+
+            <Link
+              to="/cart"
+              className={`flex items-center space-x-2 text-gray-600 hover:text-black ${
+                location.pathname === "/cart" ? "font-bold text-black" : ""
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              <ShoppingCartIcon className="h-5 w-5" />
+              <span>Cart</span>
+            </Link>
           </div>
         </div>
       )}
