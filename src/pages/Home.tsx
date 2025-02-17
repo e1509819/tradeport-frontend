@@ -5,7 +5,14 @@ import FeaturesSection from "../components/FeaturesSection";
 import NewsletterSignup from "../components/NewsLetterSignup";
 
 const Home = () => {
-  const images = ["/img/sofa.jpg", "/img/bedroom.jpg", "/img/office.jpg"];
+  const images = [
+    "/img/sofa.jpg",
+    "/img/bedroom.jpg",
+    "/img/office.jpg",
+    "/img/kitchen.jpg",
+    "/img/bathroom.jpg",
+    "/img/outdoor.jpg",
+  ];
 
   return (
     <div className="mx-auto min-h-screen max-w-7xl">
