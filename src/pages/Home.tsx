@@ -1,12 +1,19 @@
+import Hero from "../components/Hero";
 import ImageSlider from "../components/ImageSlider";
+import CategoryGrid from "../components/CategoryGrid";
+import FeaturesSection from "../components/FeaturesSection";
+import NewsletterSignup from "../components/NewsLetterSignup";
 
 const Home = () => {
-  const images = ["/img/sofa.jpg", "/img/bedroom.jpg"];
+  const images = ["/img/sofa.jpg", "/img/bedroom.jpg", "/img/office.jpg"];
 
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto min-h-screen max-w-7xl">
       <ImageSlider images={images} />
-      <ImageSlider images={images} />
+      <Hero />
+      <CategoryGrid />
+      <FeaturesSection />
+      <NewsletterSignup />
     </div>
   );
 };

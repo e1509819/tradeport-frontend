@@ -4,6 +4,7 @@ import { ThankYouPage } from "./pages/ThankYouPage";
 import Home from "./pages/Home";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 const App = () => {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/product" element={<ProductMaster />} />
         <Route path="/thank-you" element={<ThankYouPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
