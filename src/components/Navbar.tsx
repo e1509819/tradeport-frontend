@@ -1,7 +1,7 @@
 import { UserCircleIcon, ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 const Navbar = () => (
-  <nav className="flex items-center justify-between border-b-2 p-4 shadow-lg">
+  <nav className="sticky top-0 z-50 flex items-center justify-between border-b-2 bg-white p-4 shadow-lg">
     <h1 className="text-xl font-bold">TradePort</h1>
     <div className="hidden space-x-6 md:flex">
       <a href="#" className="text-gray-600 hover:text-black">
