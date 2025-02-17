@@ -8,27 +8,27 @@ interface CategoryProps {
 const categories: CategoryProps[] = [
   {
     image: "/img/sofa.jpg",
-    title: "Cosmetics",
+    title: "Living Room",
   },
   {
-    image: "/img/sofa.jpg",
-    title: "Cosmetics",
+    image: "/img/bedroom.jpg",
+    title: "Bedroom",
   },
   {
-    image: "/img/sofa.jpg",
-    title: "Cosmetics",
+    image: "/img/kitchen.jpg",
+    title: "Kitchen",
   },
   {
-    image: "/img/sofa.jpg",
-    title: "Cosmetics",
+    image: "/img/bathroom.jpg",
+    title: "Bathroom",
   },
   {
-    image: "/img/sofa.jpg",
-    title: "Cosmetics",
+    image: "/img/outdoor.jpg",
+    title: "Outdoor",
   },
   {
-    image: "/img/sofa.jpg",
-    title: "Cosmetics",
+    image: "/img/office.jpg",
+    title: "Office",
   },
 ];
 

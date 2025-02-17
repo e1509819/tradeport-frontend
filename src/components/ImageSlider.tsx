@@ -20,7 +20,7 @@ const ImageSlider = ({ images }: { images: string[] }) => {
   return (
     <div
       id="image-slider"
-      className="relative mx-auto mt-12 w-full max-w-7xl shadow-lg"
+      className="relative mx-auto w-full max-w-7xl shadow-lg md:mt-10"
     >
       {/* Slider Container */}
       <div className="relative h-96 w-full overflow-hidden">
