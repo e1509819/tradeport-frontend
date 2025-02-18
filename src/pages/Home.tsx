@@ -2,7 +2,7 @@ import Hero from "../components/Hero";
 import ImageSlider from "../components/ImageSlider";
 import CategoryGrid from "../components/CategoryGrid";
 import FeaturesSection from "../components/FeaturesSection";
-import NewsletterSignup from "../components/NewsLetterSignup";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   const images = [
@@ -20,7 +20,7 @@ const Home = () => {
       <Hero />
       <CategoryGrid />
       <FeaturesSection />
-      <NewsletterSignup />
+      <Newsletter />
     </div>
   );
 };
