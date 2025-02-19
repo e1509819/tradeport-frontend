@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server --watch db.json --port 3016"
+    "server": "json-server --watch storage.json --port 3016"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",

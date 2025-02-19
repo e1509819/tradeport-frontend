@@ -446,6 +446,80 @@
       "wholeSaleCurrency": "USD",
       "quantity": "33",
       "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    },
+    {
+      "id": "b070",
+      "productName": "RANJITH",
+      "description": "ewqe",
+      "category": "103",
+      "retailPrice": "444",
+      "retailCurrency": "USD",
+      "wholesalePrice": "444",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4444",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "shippingCost": 30
+    },
+    {
+      "id": "e472",
+      "productName": "44",
+      "description": "4444",
+      "category": "101",
+      "retailPrice": "-2",
+      "retailCurrency": "EUR",
+      "wholesalePrice": "2",
+      "wholeSaleCurrency": "EUR",
+      "quantity": "3",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "shippingCost": 30
+    },
+    {
+      "id": "d20c",
+      "productName": "RANJITH",
+      "description": "Tere",
+      "category": "101",
+      "retailPrice": "3",
+      "retailCurrency": "USD",
+      "wholesalePrice": "3",
+      "wholeSaleCurrency": "USD",
+      "quantity": "3",
+      "image": {
+        "0": {}
+      },
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "shippingCost": 30
+    },
+    {
+      "id": "e355",
+      "productName": "RANJITH",
+      "description": "rrr",
+      "category": "101",
+      "productimage": {
+        "0": {}
+      },
+      "retailPrice": "4",
+      "retailCurrency": "USD",
+      "wholesalePrice": "4",
+      "wholeSaleCurrency": "USD",
+      "quantity": "4",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "shippingCost": 30
+    },
+    {
+      "id": "f746",
+      "productName": "444",
+      "description": "44",
+      "category": "101",
+      "productimage": {
+        "0": {}
+      },
+      "retailPrice": "44",
+      "retailCurrency": "USD",
+      "wholesalePrice": "44",
+      "wholeSaleCurrency": "USD",
+      "quantity": "44",
+      "manufacturerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "shippingCost": 30
     }
   ],
   "submissions": [
