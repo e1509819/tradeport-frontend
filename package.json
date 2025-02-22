@@ -11,12 +11,15 @@
     "server": "json-server --watch storage.json --port 3016"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.54.2",
-    "react-router-dom": "^7.1.5"
+    "react-router-dom": "^7.1.5",
+    "tradeportexpress": "file:"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -25,11 +28,16 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9.17.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
     "json-server": "^1.0.0-beta.3",
+    "postcss": "^8.4.40",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tailwindcss": "^3.4.7",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"

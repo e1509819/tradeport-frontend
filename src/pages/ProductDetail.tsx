@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getPosts } from './posts/getPost';
-import { Product } from './posts/types';
+import { getPosts } from '../posts/getPost';
+import { Product } from '../posts/types';
 
 export function ProductDetail() {
   const { productID } = useParams<{ productID: string }>();

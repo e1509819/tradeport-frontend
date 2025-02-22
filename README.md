@@ -1,50 +1,104 @@
-# React + TypeScript + Vite
+# TradePort Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **TradePort Frontend** is a web application developed using **React**, **TypeScript**, and **Tailwind CSS**. It serves as the user interface for the TradePort platform, providing seamless and secure access to trading functionalities. Authentication is managed using **Auth0**, ensuring robust user identity management.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- ⚡ **Modern UI/UX** with React and Tailwind CSS
+- ⚛️ **Type-Safe Development** with TypeScript
+- 📈 **Scalable and Maintainable Architecture**
+- 🌐 **API Integration** with C# backend services
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🏗️ Project Structure
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+tradeport-frontend/
+├── public/             # Static files
+├── src/
+│   ├── assets/         # Static assets (images, fonts)
+│   ├── components/     # Reusable UI components
+│   ├── hooks/          # Custom React hooks
+│   ├── pages/          # Page components (routes)
+│   ├── services/       # API services and Auth0 logic
+│   ├── styles/         # Global styles (Tailwind CSS)
+│   ├── utils/          # Utility functions
+│   ├── App.tsx         # Main App component
+│   ├── main.tsx        # Entry point
+│   └── vite.config.ts  # Vite configuration
+├── package.json        # Project dependencies and scripts
+├── tailwind.config.js  # Tailwind CSS configuration
+└── tsconfig.json       # TypeScript configuration
 ```
+## ⚙️ Getting Started
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/en/) (v16 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/your-org/tradeport-frontend.git
+cd tradeport-frontend
+```
+2. **Install dependencies:**
+```bash
+npm install
+# or
+yarn install
+```
+3. **Configure Auth0:**
+Create a `.env` file in the root directory and add the following:
+```ini
+VITE_AUTH0_DOMAIN=your-auth0-domain
+VITE_AUTH0_CLIENT_ID=your-auth0-client-id
+VITE_AUTH0_AUDIENCE=your-auth0-audience
+```
+### Running the Application
+```bash
+npm run dev
+# or
+yarn dev
+```
+The app will be available at [http://localhost:5173](http://localhost:5173).
+
+## 🧪 Testing
+
+We use **Vitest** for testing the frontend.
+
+### Running Tests
+
+```bash
+npm run test
+# or
+yarn test
+```
+## 🛡️ Authentication (Auth0)
+The app uses **Auth0** for authentication. The configuration is managed through environment variables. The `services/auth.ts` file handles Auth0 initialization and provides hooks for authentication logic.
+## 🏗️ Backend Integration
+The frontend communicates with C# backend services through REST APIs. Ensure the backend is running and accessible at the correct endpoints defined in the `services/` directory.
+## 📦 Deployment
+To create a production build:
+```bash
+npm run build
+# or
+yarn build
+```
+Serve the build locally:
+```bash
+npm run preview
+# or
+yarn preview
+```
+## 🤝 Contributing
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/feature-name`)
+3. Commit your changes (`git commit -m 'Add some feature'`)
+4. Push to the branch (`git push origin feature/feature-name`)
+5. Open a Pull Request
+
+## 📬 Contact
+For issues, reach out via the repository's [issues page](https://github.com/your-org/tradeport-frontend/issues).
+
+Happy Coding! 🚀
+
