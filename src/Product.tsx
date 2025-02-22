@@ -14,8 +14,7 @@ export function ProductMaster() {
   const onSubmit = async (product: Product): Promise<void> => {
     console.log('Submitted details:', product);
     try {
-   
-      const body: SavedPost = await savePost(product,image);
+      const body: SavedPost = await savePost(product, image);
       console.log('response:', body);
       navigate(`thank-you`);
     } catch (error) {
@@ -24,8 +23,7 @@ export function ProductMaster() {
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?e.target.files[0] : null;
-    
+    const file = e.target.files ? e.target.files[0] : null;
     setImage(file);
     if (file) {
       setImagePreview(URL.createObjectURL(file));
@@ -81,7 +79,7 @@ export function ProductMaster() {
                 id="image"
                 className="p-2 border-2 border-gray-300 rounded-lg"
                 accept="image/*"
-                onChange={handleImageChange}
+                {...register('productimage', { required: 'You must select an image', onChange: handleImageChange })}
               />
             </div>
             {imagePreview && (
