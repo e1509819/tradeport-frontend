@@ -25,7 +25,7 @@ export function ProductDetail() {
       <div className="flex flex-col p-6 m-3 space-y-10 bg-white rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
         <div>
           <img
-            src={"/images/headphone.png"}
+            src={`/images/headphone.png`}
             alt={post.productName}
             className="mx-auto duration-200 w-60 hover:scale-105"
           />
