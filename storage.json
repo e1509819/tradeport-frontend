@@ -15,7 +15,9 @@
               "shippingCost": 30,
               "createdOn": "2025-02-13T15:26:45.447",
               "updatedOn": "2025-02-13T15:26:45.447",
-              "isActive": true           
+              "isActive": true,
+              "productimage":"iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAgAB/ubpgZsAAAAASUVORK5CYII="
+                    
         }
     ],
     "submit": [
