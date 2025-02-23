@@ -33,6 +33,11 @@ jobs:
         run: |
           npm install
 
+      # Run Unit Tests with Vitest
+      - name: Run Unit Tests
+        run: |
+          npm run test
+
       # Build the frontend
       - name: Build frontend
         run: |
