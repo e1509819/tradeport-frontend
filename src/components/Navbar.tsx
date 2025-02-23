@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Categories", path: "/categories" },
+    { name: "Categories", path: "/catalogGrid" },
     { name: "Product", path: "/product" },
     { name: "Product Detail", path: "/productdetail/d0c6b9e2-89f4-43ac-2e7d-08dd4c42d367" },
   ];
