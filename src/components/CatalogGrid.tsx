@@ -48,7 +48,7 @@ const ProductCard: React.FC<Product> = ({ ...product }) => {
 
     const handleCardClick = () => {
         // Navigate to orderPage with productID
-        navigate(`/orderPage?productID=${product.productID}`);
+        navigate(`/productdetail/${product.productID}`);
     };
 
     return (
