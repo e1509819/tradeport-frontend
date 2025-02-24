@@ -12,18 +12,22 @@ export async function savePost(newPostData: Product, image: File | null) {
       const reader = new FileReader();
       reader.readAsDataURL(image);
       reader.onloadend = () => {
-        const base64data = reader.result as string;
+        //const base64data = reader.result as string;
         //console.log('base64data:', base64data);
-        newPostData.productimage = base64data;
+        newPostData.productimage = image;
         formData.append('product', JSON.stringify(newPostData));
         console.log('newPostData:', newPostData);
       };
+    }
+    else {
+      newPostData.productimage = null;
+      formData.append('product', JSON.stringify(newPostData));
     }
 
     const response = await fetch(apiUrl, {
       method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "multipart/form-data"
       },
       body: formData,
     });
