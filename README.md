@@ -1,16 +1,15 @@
 <!--START_SECTION:github-actions-badges-->
-[![CI](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci.yml)
-[![Security](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci-security-owasp.yml/badge.svg)](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci-security-owasp.yml)
-[![DAST](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci-dast.yml/badge.svg)](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci-dast.yml)
-[![E2E Tests](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci-selenium.yml/badge.svg)](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci-selenium.yml)
+[![CI](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/ci.yml)<br>
+[![CD Pipeline - Deploy to Dockerhub](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/cd.yml/badge.svg?branch=main)](https://github.com/TradePortProject/tradeport-frontend/actions/workflows/cd.yml)
 <!--END_SECTION:github-actions-badges-->
-
+<br>
 # TradePort Frontend
+
+// To Remove : Demo
 
 The **TradePort Frontend** is a web application developed using **React**, **TypeScript**, and **Tailwind CSS**. It serves as the user interface for the TradePort platform, providing seamless and sophisticated user experiences.
 
 ## 🚀 Features
-
 - ⚡ **Modern UI/UX** with React and Tailwind CSS
 - ⚛️ **Type-Safe Development** with TypeScript
 - 📈 **Scalable and Maintainable Architecture**
