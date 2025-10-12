@@ -16,7 +16,7 @@ export const ENDPOINTS = {
     BY_ID: (id: string) =>
       `${API_URLS.PRODUCT_API}/api/ProductManagement/${id}`,
     FILTERED: (params: string) =>
-      `${API_URLS.PRODUCT_API}/api/productManagement/GetFilteredProducts${params}`,
+      `${API_URLS.PRODUCT_API}/api/ProductManagement/GetFilteredProducts${params}`,
     IMAGE: (path: string) => `${API_URLS.PRODUCT_API}${path}`,
   },
 
