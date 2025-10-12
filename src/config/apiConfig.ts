@@ -1,8 +1,8 @@
 // API base URLs
 const API_URLS = {
-  PRODUCT_API: import.meta.env.VITE_PRODUCT_API_URL || "http://localhost:3016",
-  ORDER_API: import.meta.env.VITE_ORDER_API_URL || "http://localhost:3017",
-  USER_API: import.meta.env.VITE_USER_API_URL || "http://localhost:7237",
+  PRODUCT_API: import.meta.env.VITE_PRODUCT_API_URL || "http://tradeport.cloud",
+  ORDER_API: import.meta.env.VITE_ORDER_API_URL || "http://tradeport.cloud",
+  USER_API: import.meta.env.VITE_USER_API_URL || "http://tradeport.cloud",
   IMAGE_FALLBACK:
     import.meta.env.VITE_IMAGE_FALLBACK_URL ||
     "http://localhost:3001/img/image-missing.jpg",
