@@ -1,4 +1,4 @@
-import { defineConfig } from "vitest/config";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig (({ mode }) => ({
@@ -14,10 +14,7 @@ export default defineConfig (({ mode }) => ({
   preview: { port: 8080, strictPort: true },
   resolve: {
     dedupe: ['react', 'react-dom', 'react-router', 'react-router-dom'],
-    alias: {
-      react: require.resolve('react'),
-      'react-dom': require.resolve('react-dom'),
-    },
+    
   },
   test: {
     globals: true,
