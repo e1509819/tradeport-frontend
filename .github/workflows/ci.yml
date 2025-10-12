@@ -1,10 +1,11 @@
-name: "CI - Stage 1 - Build and Test (Parallel)"
+name: "CI Frontend - Build, Test & Security Scan"
 
 on:
   push:
     branches:
       - main
       - "feature/**"
+      - "hotfix/**"
   pull_request:
     branches:
       - main
@@ -14,32 +15,29 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  NODE_VERSION: "20"
+
 jobs:
   setup:
     name: 📐 Setup Environment
     runs-on: ubuntu-latest
     outputs:
-      node-modules-cache-hit: ${{ steps.cache-nodemodules.outputs.cache-hit }}
+      cache-hit: ${{ steps.cache-nodemodules.outputs.cache-hit }}
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
-
-      - name: Cache node_modules
-        id: cache-nodemodules
+      - id: cache-nodemodules
         uses: actions/cache@v3
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-      - name: Install Dependencies
+      - name: 📦 Install Dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
-        run: npm ci --prefer-offline
+        run: npm ci
 
   lint:
     name: 🧪 Lint Code
@@ -68,24 +66,115 @@ jobs:
     runs-on: ubuntu-latest
     needs: setup
     steps:
-      - name: 📥 Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: 🧰 Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "npm"
-
-      - name: 📦 Install Dependencies
-        run: npm ci
-
-      - name: 🏗️ Run Production Build
-        run: npm run build:prod
-
-      - name: 📤 Upload Build Artifacts
-        uses: actions/upload-artifact@v4
+      - run: npm ci
+      - run: npm run build:prod
+      - uses: actions/upload-artifact@v4
         with:
           name: build-files
           path: dist/
           retention-days: 1
+
+  npm-audit:
+    name: 🔐 SCA - npm Audit 
+    runs-on: ubuntu-latest
+    needs: [lint, unit-test, build]
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci --prefer-offline --no-audit
+      - run: npm audit --json > npm-audit.json || true
+      - run: |
+          if grep -q '"severity":"high"' npm-audit.json; then
+            echo "⚠️ High severity vulnerabilities found in npm audit"
+            grep '"severity":"high"' npm-audit.json || true
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: npm-audit-report
+          path: npm-audit.json
+          retention-days: 7
+
+  owasp-sca:
+    name: 🔐 SCA - OWASP Dependency Check 
+    runs-on: ubuntu-latest
+    needs: [lint, unit-test, build]
+    steps:
+      - uses: actions/checkout@v4
+      - name: ♻️ Cache Dependency-Check DB
+        uses: actions/cache@v3
+        with:
+          path: ~/.dependency-check
+          key: dependency-check-db
+      - name: 📥 Download Dependency-Check CLI
+        run: |
+          wget https://github.com/jeremylong/DependencyCheck/releases/download/v7.2.0/dependency-check-7.2.0-release.zip
+          unzip -q dependency-check-7.2.0-release.zip
+      - name: 🔍 Run Dependency-Check (Selective Scan)
+        run: |
+          dependency-check/bin/dependency-check.sh \
+            --project "TradePort" \
+            --scan ./src ./package.json ./package-lock.json \
+            --format XML \
+            --out odc-report.xml \
+            --noupdate | tee ODC-report.log || true
+      - name: 📄 Log CRITICAL Vulnerabilities 
+        run: |
+          if grep -q "CRITICAL" ./ODC-report.log; then
+            echo "⚠️ CRITICAL vulnerabilities found — see ODC-report.log"
+            grep "CRITICAL" ./ODC-report.log || true
+          else
+            echo "✅ No CRITICAL vulnerabilities found"
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: owasp-report
+          path: |
+            ODC-report.log
+            odc-report.xml
+          retention-days: 7
+
+  codeql-sast:
+    name: ☢️ SAST - CodeQL
+    runs-on: ubuntu-latest
+    needs: [lint, unit-test, build]
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: javascript
+      - uses: github/codeql-action/autobuild@v3
+      - uses: github/codeql-action/analyze@v3
+
+  dast-zap:
+    name: ☣️ DAST - OWASP ZAP Scan 
+    runs-on: ubuntu-latest
+    needs: [npm-audit, owasp-sca, codeql-sast]
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm ci
+      - run: npm run build:prod
+      - run: |
+          nohup npm run preview -- --port 4173 & sleep 10
+          curl -I http://localhost:4173 || true
+      - run: |
+          docker run --network host \
+            --user root \
+            -v "${{ github.workspace }}:/zap/wrk/:rw" \
+            -t ghcr.io/zaproxy/zaproxy:stable zap-baseline.py \
+            -t http://localhost:4173 \
+            -g gen.conf \
+            -r zap_baseline_report.html || echo "⚠️ ZAP scan failed but continuing"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: zap-report
+          path: zap_baseline_report.html
