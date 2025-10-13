@@ -5,7 +5,7 @@ const API_URLS = {
   USER_API: import.meta.env.VITE_USER_API_URL || "http://tradeport.cloud",
   IMAGE_FALLBACK:
     import.meta.env.VITE_IMAGE_FALLBACK_URL ||
-    "http://localhost:3001/img/image-missing.jpg",
+    "http://tradeport.cloud/img/image-missing.jpg",
 };
 
 // API Endpoints
@@ -17,7 +17,7 @@ export const ENDPOINTS = {
       `${API_URLS.PRODUCT_API}/api/ProductManagement/${id}`,
     FILTERED: (params: string) =>
       `${API_URLS.PRODUCT_API}/api/ProductManagement/GetFilteredProducts${params}`,
-    IMAGE: (path: string) => `${API_URLS.PRODUCT_API}${path}`,
+    IMAGE: (path: string) => `${path}`,
   },
 
   // Order Management
